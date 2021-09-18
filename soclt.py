@@ -44,7 +44,7 @@ def worker(t_name):
     action(msg)
 
 if __name__ == '__main__':
-    t = threading.Thread(target=worker, args=('worker'))
+    t = threading.Thread(target=worker, args=('worker',))
     t.start()
     # listener for the message sent by the server
     with socket(AF_INET, SOCK_STREAM) as tcp_client:
